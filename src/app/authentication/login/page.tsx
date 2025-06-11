@@ -5,6 +5,7 @@ import { Grid, Box, Card, Stack, Typography } from "@mui/material";
 import PageContainer from "@/app/(DashboardLayout)/components/container/PageContainer";
 import Logo from "@/app/(DashboardLayout)/layout/shared/logo/Logo";
 import AuthLogin from "../auth/AuthLogin";
+import Image from "next/image";
 
 const Login2 = () => {
   return (
@@ -38,14 +39,22 @@ const Login2 = () => {
               xs: 12,
               sm: 12,
               lg: 4,
-              xl: 3
-            }}>
+              xl: 3,
+            }}
+          >
             <Card
               elevation={9}
               sx={{ p: 4, zIndex: 1, width: "100%", maxWidth: "500px" }}
             >
               <Box display="flex" alignItems="center" justifyContent="center">
-                <Logo />
+                <div>
+                  <Image
+                    src="/images/logos/asset-logo.svg"
+                    alt="logo"
+                    width={220}
+                    height={120}
+                  />
+                </div>
               </Box>
               <AuthLogin
                 subtext={
