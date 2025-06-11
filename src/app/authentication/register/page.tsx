@@ -4,6 +4,7 @@ import Link from "next/link";
 import PageContainer from "@/app/(DashboardLayout)/components/container/PageContainer";
 import Logo from "@/app/(DashboardLayout)/layout/shared/logo/Logo";
 import AuthRegister from "../auth/AuthRegister";
+import Image from "next/image";
 
 const Register2 = () => (
   <PageContainer title="Register" description="this is Register page">
@@ -44,7 +45,15 @@ const Register2 = () => (
             sx={{ p: 4, zIndex: 1, width: "100%", maxWidth: "500px" }}
           >
             <Box display="flex" alignItems="center" justifyContent="center">
-              <Logo />
+              {/* <Logo /> */}
+              <div>
+                <Image
+                  src="/images/logos/asset-logo.svg"
+                  alt="logo"
+                  width={220}
+                  height={120}
+                />
+              </div>
             </Box>
             <AuthRegister
               subtitle={

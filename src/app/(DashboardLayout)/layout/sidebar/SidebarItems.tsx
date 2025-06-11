@@ -81,7 +81,7 @@ const SidebarItems = () => {
         </Logo> */}
         <LogoContainer>
           <Image
-            src="/images/logos/dark-logo.jpg"
+            src="/images/logos/asset-logo.svg"
             alt="Paprika Logo"
             width={220}
             height={110}
