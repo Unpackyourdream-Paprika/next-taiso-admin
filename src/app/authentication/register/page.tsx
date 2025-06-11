@@ -36,8 +36,9 @@ const Register2 = () => (
             xs: 12,
             sm: 12,
             lg: 4,
-            xl: 3
-          }}>
+            xl: 3,
+          }}
+        >
           <Card
             elevation={9}
             sx={{ p: 4, zIndex: 1, width: "100%", maxWidth: "500px" }}
@@ -46,16 +47,6 @@ const Register2 = () => (
               <Logo />
             </Box>
             <AuthRegister
-              subtext={
-                <Typography
-                  variant="subtitle1"
-                  textAlign="center"
-                  color="textSecondary"
-                  mb={1}
-                >
-                  Your Social Campaigns
-                </Typography>
-              }
               subtitle={
                 <Stack
                   direction="row"

@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Header from "@/app/(DashboardLayout)/layout/header/Header";
 import Sidebar from "@/app/(DashboardLayout)/layout/sidebar/Sidebar";
 
-
 const MainWrapper = styled("div")(() => ({
   display: "flex",
   minHeight: "100vh",
@@ -24,8 +23,6 @@ interface Props {
   children: React.ReactNode;
 }
 
-
-
 export default function RootLayout({
   children,
 }: {
@@ -34,7 +31,7 @@ export default function RootLayout({
   const [isSidebarOpen, setSidebarOpen] = useState(true);
   const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   return (
-    <MainWrapper className="mainwrapper">
+    <MainWrapper className="mainwrapper" suppressHydrationWarning={true}>
       {/* ------------------------------------------- */}
       {/* Sidebar */}
       {/* ------------------------------------------- */}
@@ -46,7 +43,7 @@ export default function RootLayout({
       {/* ------------------------------------------- */}
       {/* Main Wrapper */}
       {/* ------------------------------------------- */}
-      <PageWrapper className="page-wrapper">
+      <PageWrapper suppressHydrationWarning={true} className="page-wrapper">
         {/* ------------------------------------------- */}
         {/* Header */}
         {/* ------------------------------------------- */}
@@ -59,6 +56,7 @@ export default function RootLayout({
             paddingTop: "20px",
             maxWidth: "1200px",
           }}
+          suppressHydrationWarning={true}
         >
           {/* ------------------------------------------- */}
           {/* Page Route */}
